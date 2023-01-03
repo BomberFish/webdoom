@@ -2,7 +2,7 @@ use std::ffi::CStr;
 use std::os::raw::{c_char, c_int};
 
 const DOOM1_WAD_FD: c_int = 42; // file descriptor for openend ./doom1.wad
-static DOOM1_WAD: &[u8; 4196020] = include_bytes!("../doom1.wad");
+static DOOM1_WAD: &[u8; 11159840] = include_bytes!("../doom1.wad");
 static mut DOOM1_WAD_SEEKER: usize = 0;
 
 static HOME_ENV: &'static [u8; 11] = b"/home/doom\0"; // C string, terminate with \0! //TODO: use CStr safely here?
