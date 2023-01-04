@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DooM - bomberfish.ca</title>
+    <title>DOOM - bomberfish.ca</title>
 
     <style>
          :root {
@@ -34,7 +34,7 @@
             width: 640px;
             height: 400px;
             font-family: var(--mono);
-            font-size: 10px;
+            font-size: 15px;
             overflow-y: scroll;
             text-align: left!important;
             color: var(--fg);
@@ -62,8 +62,9 @@
             border: none;
             border-radius: 8px;
             background: var(--mg);
-            font-size: 20px;
+            font-size: 17px;
             color: var(--fg);
+            font-family: var(--mono);
         }
         
         #debug {
@@ -87,7 +88,8 @@
         <div class="container">
             <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
         </div>
-        <p><button id="enterButton">&#x23CE;</button> <button id="leftButton">&#x2190;</button> <button id="upButton">&#x2191;</button> <button id="downButton">&#x2193;</button> <button id="rightButton">&#x2192;</button> <button id="ctrlButton">ctrl</button>            <button id="spaceButton">Space</button> <button id="altButton">alt</button></p>
+        <p><button id="leftButton">&#x2190;</button> <button id="upButton">&#x2191;</button> <button id="downButton">&#x2193;</button> <button id="rightButton">&#x2192;</button> <button id="ctrlButton">ctrl</button> <button id="spaceButton">Space</button> <button id="altButton">alt</button> <button id="enterButton">&#x23CE;</button> </p>
+        <div style="font-family: var(--mono); font-weight: 600; font-size: 1.1em;">DOOM at bomberfish.ca</div><br>
         <div id="output"></div><br>
         <div id="debug">
             gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br> DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>            Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
