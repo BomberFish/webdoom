@@ -73,6 +73,7 @@
         
         #screen {
             background: var(--mg2);
+            border-radius: 8px;
         }
         
         #wrapper {
@@ -92,7 +93,10 @@
         <div style="font-family: var(--mono); font-weight: 600; font-size: 1.1em;">DOOM at bomberfish.ca</div><br>
         <div id="output"></div><br>
         <div id="debug">
-            gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br> DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>            Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+            getmilliseconds calls per second: <span id="getmsps_stats">0</span><br> 
+            Total getmilliseconds calls: <span id="getms_stats">0</span><br> DOOM FPS: <span id="fps_stats">0</span> (target: 35FPS)<br> 
+            Total Frames drawn: <span id="drawframes_stats">0</span><br>
+            Browser Animation FPS: <span id="animationfps_stats">0</span> (target: ~60FPS)<br>
         </div>
         <script src="main.js" defer></script>
     </div>
