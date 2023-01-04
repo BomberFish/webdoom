@@ -15,6 +15,8 @@
             --fg: rgba(255, 255, 255, 1);
             --mg: rgba(255, 255, 255, 0.15);
             --mg2: rgba(255, 255, 255, 0.05);
+            --err: rgba(255, 63, 63, 1);
+            --log: rgba(100, 100, 255, 1);
             --body: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI Variable', 'Segoe UI', 'Roboto Flex', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             --mono: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Mono', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
         }
@@ -43,12 +45,12 @@
         }
         
         #output span.stdout {
-            color: black;
+            color: var(--fg);
         }
         
         #output span.stderr {
             font-weight: bold;
-            color: brown;
+            color: var(--error);
         }
         
         .container {
@@ -67,16 +69,15 @@
         #debug {
             font-family: var(--mono)
         }
-
+        
         #screen {
-          background: var(--mg2);
+            background: var(--mg2);
         }
-
+        
         #wrapper {
-          margin: auto;
-          width: 640px;
+            margin: auto;
+            width: 640px;
         }
-
     </style>
 </head>
 
