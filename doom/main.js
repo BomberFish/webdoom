@@ -155,7 +155,7 @@ WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
         button.addEventListener("touchcancel", () => keyUp(keyCode));
     });
 
-    /*hint that the canvas should have focus to capute keyboard events*/
+    /*hint that the canvas should have focus to capture keyboard events*/
     const focushint = document.getElementById("focushint");
     const printFocusInHint = function(e) {
         focushint.innerText = "Keyboard events will be captured as long as the the DOOM canvas has focus.";
@@ -164,7 +164,7 @@ WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
     canvas.addEventListener('focusin', printFocusInHint, false);
 
     canvas.addEventListener('focusout', function(e) {
-        focushint.innerText = "Click on the canvas to capute input and start playing.";
+        focushint.innerText = "Click on the canvas to capture input and start playing.";
         focushint.style.fontWeight = "bold";
     }, false);
 
