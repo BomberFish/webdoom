@@ -7,80 +7,10 @@
 <head>
     <meta charset="utf-8">
     <title>DOOM - bomberfish.ca</title>
-
-    <style>
-         :root {
-            text-align: center;
-            --bg: rgba(0, 0, 0, 1);
-            --fg: rgba(255, 255, 255, 1);
-            --mg: rgba(255, 255, 255, 0.15);
-            --mg2: rgba(255, 255, 255, 0.05);
-            --err: rgba(255, 63, 63, 1);
-            --log: rgba(100, 100, 255, 1);
-            --body: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI Variable', 'Segoe UI', 'Roboto Flex', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-            --mono: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Mono', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-        }
-        
-        body {
-            font-family: var(--body);
-            background: var(--bg);
-            color: var(--fg);
-        }
-        
-        #output {
-            background-color: var(--mg);
-            padding: 10px;
-            border-radius: 8px;
-            width: 640px;
-            height: 400px;
-            font-family: var(--mono);
-            font-size: 15px;
-            overflow-y: scroll;
-            text-align: left!important;
-            color: var(--fg);
-        }
-        
-        #output span.log {
-            color: var(--log);
-        }
-        
-        #output span.stdout {
-            color: var(--fg);
-        }
-        
-        #output span.stderr {
-            font-weight: bold;
-            color: var(--err);
-        }
-        
-        .container {
-            display: flex;
-        }
-        
-        button {
-            padding: 20px;
-            border: none;
-            border-radius: 8px;
-            background: var(--mg);
-            font-size: 17px;
-            color: var(--fg);
-            font-family: var(--mono);
-        }
-        
-        #debug {
-            font-family: var(--mono)
-        }
-        
-        #screen {
-            background: var(--mg2);
-            border-radius: 8px;
-        }
-        
-        #wrapper {
-            margin: auto;
-            width: 640px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgba(0,0,0,1)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
@@ -89,13 +19,14 @@
         <div class="container">
             <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
         </div>
-        <p><button id="leftButton">&#x2190;</button> <button id="upButton">&#x2191;</button> <button id="downButton">&#x2193;</button> <button id="rightButton">&#x2192;</button> <button id="ctrlButton">ctrl</button> <button id="spaceButton">Space</button> <button id="altButton">alt</button> <button id="enterButton">&#x23CE;</button> </p>
+        <p><button id="leftButton">&#x2190;</button> <button id="upButton">&#x2191;</button> <button id="downButton">&#x2193;</button> <button id="rightButton">&#x2192;</button> <button id="ctrlButton">ctrl</button> <button id="spaceButton">Space</button>            <button id="altButton">alt</button> <button id="enterButton">&#x23CE;</button> </p>
         <div style="font-family: var(--mono); font-weight: 600; font-size: 1.1em;">DOOM at bomberfish.ca</div><br>
         <div id="output"></div><br>
         <div id="debug">
             getmilliseconds calls per second: <span id="getmsps_stats">0</span><br> 
-            Total getmilliseconds calls: <span id="getms_stats">0</span><br> DOOM FPS: <span id="fps_stats">0</span> (target: 35FPS)<br> 
-            Total Frames drawn: <span id="drawframes_stats">0</span><br>
+            Total getmilliseconds calls: <span id="getms_stats">0</span><br> 
+            DOOM FPS: <span id="fps_stats">0</span> (target: 35FPS)<br> 
+            Total Frames drawn: <span id="drawframes_stats">0</span><br>            
             Browser Animation FPS: <span id="animationfps_stats">0</span> (target: ~60FPS)<br>
         </div>
         <script src="main.js" defer></script>
