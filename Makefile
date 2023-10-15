@@ -7,6 +7,7 @@ gh-pages: all
 	cp -a ./doom/styles.css ./public
 	cp -a ./doom/main.js ./public
 	cp -a ./doom/doom.wasm ./public
+	cp -a ./doom/favicon.ico ./public
 
 clean:
 	rm -rf ./public
